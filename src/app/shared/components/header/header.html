@@ -1,7 +1,19 @@
-<header class="flex flex-row justify-between p-4 bg-teal-700 text-white">
-  <div class="" routerLink="/">{{app_tittle()}}</div>
-  <nav class="w-1/6">
-    <ul class="flex flex-row justify-between">
+<header class="fixed top-0 left-0 right-0 z-50 flex flex-row justify-between items-center p-4 bg-slate-600 text-white">
+
+  <div class="cursor-pointer font-bold text-lg" routerLink="/">{{app_tittle()}}</div>
+
+  <button
+    class="flex flex-col gap-1.5 p-1 sm:hidden"
+    (click)="menuOpen = !menuOpen"
+    aria-label="Toggle menu"
+  >
+    <span class="block w-6 h-0.5 bg-white"></span>
+    <span class="block w-6 h-0.5 bg-white"></span>
+    <span class="block w-6 h-0.5 bg-white"></span>
+  </button>
+
+  <nav class="hidden sm:flex" [ngClass]="menuOpen ? 'flex absolute top-full left-0 w-full bg-slate-600 p-4' : ''">
+    <ul class="flex flex-row max-sm:flex-col gap-6">
       <li class="cursor-pointer">
         <a routerLink="/" routerLinkActive="active-link">Home</a>
       </li>
@@ -13,4 +25,5 @@
       </li>
     </ul>
   </nav>
+
 </header>

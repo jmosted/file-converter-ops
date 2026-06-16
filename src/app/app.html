@@ -1,5 +1,7 @@
-<main class="m-auto flex-grow flex flex-col min-h-screen bg-gray-500">
-  <app-header [app_tittle] = title()></app-header>
-  <router-outlet />
+<main class="m-auto flex-grow flex flex-col min-h-screen bg-brand-900">
+  <app-header [app_tittle] = title() class=""></app-header>
+  <div class="flex-1">
+    <router-outlet/>
+  </div>
   <app-footer></app-footer>
 </main>

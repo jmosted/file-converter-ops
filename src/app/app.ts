@@ -9,5 +9,5 @@ import { Footer } from './shared/components/footer/footer';
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('File converter');
+  protected readonly title = signal('Format converter');
 }
