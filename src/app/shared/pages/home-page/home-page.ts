@@ -3,9 +3,8 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
-  imports: [],
-  templateUrl: './home-page.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [RouterLink],
+  templateUrl: './home-page.html'
 })
 export class HomePage {
   app_title = 'File Converter'
